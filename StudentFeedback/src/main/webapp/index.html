@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Student Feedback System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Feedback System</h1>
+
+        <p class="subtitle">
+            We value your feedback
+        </p>
+
+        <form action="FeedbackServlet" method="post">
+
+            <label>Student Name</label>
+            <input type="text"
+       name="studentName"
+       placeholder="Enter your name"
+       minlength="2"
+       required>
+
+            <input type="number" name="rollNo"
+       placeholder="Enter roll number"
+       min="1"
+       required>
+
+            <label>Subject</label>
+            <input type="text" name="subject"
+                   placeholder="Enter subject" required>
+
+            <label>Rating</label>
+
+            <select name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Average</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label>Feedback</label>
+
+            <textarea name="feedback"
+          placeholder="Write your feedback here..."
+          rows="5"
+          minlength="10"
+          required></textarea>
+
+            <input type="submit"
+                   value="Submit Feedback">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
